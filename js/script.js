@@ -71,8 +71,8 @@ const desktopCompanySubMenu = document.getElementById("js-desktop-company-submen
 const desktopFeaturesArrow = document.getElementById("js-desktop-features-arrow");
 const desktopCompanyArrow = document.getElementById("js-desktop-company-arrow");
 
-let urlArrowUp = "images/icon-arrow-up.svg";
-let urlArrowDown = "images/icon-arrow-down.svg";
+let urlArrowUp = "../images/icon-arrow-up.svg";
+let urlArrowDown = "../images/icon-arrow-down.svg";
 
 // Event listener that toggles desktop features submenu and arrow image.
 // Also toggles desktop company submenu and it's arrow image if active.
