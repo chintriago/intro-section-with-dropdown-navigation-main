@@ -1,0 +1,430 @@
+/* General/Reset */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root {
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+}
+
+html {
+    background-color: var(--almost-white);
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    all: unset;
+}
+/* dark background overlay for mobile dropdown menu */
+.dark-bg-overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+/* pop up mobile menu */
+.mobile-menu {
+    display: none;
+    width: 60%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    margin-left: auto;
+    padding: 1rem;
+    text-align: right;
+    z-index: 3;
+}
+
+.mobile-menu-icon {
+    cursor: pointer;
+}
+
+.arrow-icon {
+    margin-left: .5rem;
+    padding: .25rem;
+    cursor: pointer;
+}
+
+.mobile-menu ul {
+    text-align: left;
+}
+
+.mobile-menu ul li {
+    padding-bottom: 1rem;
+}
+
+.mobile-menu ul li img {
+    margin-right: .5rem;
+}
+
+.mobile-menu ol {
+    display: none;
+    margin-left: 20%;
+}
+
+.mobile-menu-btns {
+    text-align: center;
+}
+
+.mobile-menu-btns a {
+    display: block;
+    cursor: pointer;
+    padding-bottom: .8rem;
+}
+
+.mobile-menu-btns button {
+    background-color: white;
+    cursor: pointer;
+    border: 1.5px solid black;
+    border-radius: .8rem;
+    padding: .5rem 3rem;
+}
+
+ol li, ul li {
+    cursor: pointer;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.header-logo {
+    padding: 1.25rem;
+}
+
+nav {
+    display: none;
+}
+
+.header-reg-btns {
+    display: none;
+}
+
+.header-hamburger-menu {
+    padding: 1.25rem;
+}
+
+/* Main Content */
+main {
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+figure {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin: 0;
+}
+
+.main-text-container {
+    padding: 2.5rem 1rem;
+    text-align: center;
+}
+
+.main-text-container h1 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.main-text-container p {
+    color: var(--medium-gray);
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.main-text-container button {
+    cursor: pointer;
+    color: white;
+    background-color: var(--almost-black);
+    border: none;
+    border-radius: 1rem;
+    padding: .8rem 1.8rem;
+}
+
+.main-logo-container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 1rem;
+    padding: 1rem;
+}
+
+/* Media Queries */
+@media screen and (min-width: 1125px) {
+    body {
+        min-height: 100vh;
+        width: 100%;
+    }
+    /* Header Section */
+    header {
+        height: 10vh;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: .20fr .80fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+            "logo nav btns";
+        padding: 1.2rem;
+    }
+
+    .header-logo {
+        grid-area: logo;
+        padding: 0;
+        margin: 0 auto;
+        height: 32px;
+    }
+
+    .header-logo img {
+        height: 100%;
+    }
+
+    /* Navbar */
+    nav {
+        grid-area: nav;
+        display: inline-block;
+        height: 32px;
+        width: 500px;
+    }
+
+    nav ul li {
+        height: 18px;
+    }
+
+    nav ul li a {
+        color: var(--medium-gray);
+    }
+
+    nav ul li a img {
+        margin-left: .35rem;
+        padding-bottom: .15rem;
+    }
+
+    nav a:active {
+        color: var(--almost-black);
+    }
+
+    /* Navbar Dropdown Menu */
+    .desktop-menu {
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: .95rem;
+    }
+    
+    .desktop-menu > li {
+        width: 100px;
+        text-align: center;
+        color: var(--medium-gray)
+    }
+
+    .desktop-menu ol {
+        position: relative;
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        font-size: .8rem;
+        padding: 1.1rem;
+        text-align: left;;
+    }
+
+    .desktop-features-submenu {
+        display: none;
+        width: 160px;
+        top: .6rem;
+        right: 3.5rem;
+    }
+
+    .desktop-company-submenu {
+        display: none;
+        width: 120px;
+        top: .6rem;
+        right: -1rem;
+    }
+
+    .desktop-menu ol li {
+        margin-bottom: .8rem;
+    }
+
+    .desktop-company-submenu li:nth-child(3) {
+        margin-bottom: 0;
+    }
+
+    .desktop-menu ol li:nth-child(4) {
+        margin-bottom: 0;
+    } 
+
+    .desktop-menu ol li img {
+        margin-right: .5rem;
+    }
+
+    /* Navbar Registration Buttons */
+    .header-reg-btns {
+        grid-area: btns;
+        display: inline-block;
+        margin-left: auto;
+    }
+
+    .header-reg-btns button {
+        background-color: white;
+        border: 2px solid var(--medium-gray);
+        border-radius: 1rem;
+        cursor: pointer;
+        margin-left: 1rem;
+        padding: .5rem 1rem;
+        color: var(--medium-gray)
+    }
+
+    .header-reg-btns button:active {
+        color: var(--almost-black);
+        border-color: var(--almost-black);
+    }
+
+    .header-reg-btns a {
+        cursor: pointer;
+        color: var(--medium-gray)
+    }
+
+    .header-reg-btns a:active {
+        color: var(--almost-black);
+    }
+
+    .header-hamburger-menu {
+        display: none;
+    }
+
+    /* Main Content */
+    main {
+        height: 90vh;
+        max-width: 80vw;
+        display: grid;
+        padding: 0;
+        grid-template-columns: .6fr .4fr;
+        grid-template-rows: .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr;
+        grid-template-areas: 
+            "main-text main-figure"
+            "main-text main-figure"
+            "main-text main-figure"
+            "main-logo main-figure"
+            "main-logo main-figure"
+            "main-logo main-figure";
+    }
+
+    figure {
+        width: 100%;
+        height: 100%; 
+        grid-area: main-figure;
+        grid-row: 2 / 9;
+        background-image: url(../images/image-hero-desktop.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+
+    figure img {
+        display: none;
+    }
+
+    .main-text-container {
+        width: 30rem;
+        grid-area: main-text;
+        grid-row: 3 / 7;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
+
+    .main-text-container h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        padding: 0;
+        margin: 0 0 1.5rem;
+    }
+
+    .main-text-container p {
+        width: 80%;
+        font-size: 1rem;
+        margin: 0 0 1.5rem;
+        padding: 0;
+    }
+
+    .main-text-container button:active {
+        background-color: white;
+        border: 1px solid black;
+        color: black;
+    }
+
+    .main-logo-container {
+        grid-area: main-logo;
+        grid-row: 8 / 9;
+        column-gap: 0;
+        align-self: end;
+        padding: 0 10rem 0 0;
+    }
+    /* removes mobile menu and dark overlay effect at media query.
+    had to use id and !important to override javascript. */
+    #js-dark-bg-overlay, #js-mobile-menu {
+        display: none!important;
+    }
+
+}
+
+/* Javascript Classes */
+.js-block {
+    display: block!important;
+}
