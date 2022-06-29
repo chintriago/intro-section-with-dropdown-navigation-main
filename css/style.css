@@ -136,7 +136,7 @@ ol li, ul li {
 header {
     display: flex;
     justify-content: space-between;
-    max-width: 768px;
+    max-width: 1024px;
     margin: 0 auto;
 }
 
@@ -158,7 +158,7 @@ nav {
 
 /* Main Content */
 main {
-    max-width: 768px;
+    max-width: 1024px;
     margin: 0 auto;
 }
 
