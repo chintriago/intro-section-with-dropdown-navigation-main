@@ -113,19 +113,23 @@ a {
 .mobile-menu-btns a {
     display: block;
     cursor: pointer;
+    color: var(--medium-gray);
     padding-bottom: .8rem;
 }
 
 .mobile-menu-btns button {
+    max-width: 100%;
     background-color: white;
-    cursor: pointer;
-    border: 1.5px solid black;
+    border: 1.5px solid var(--medium-gray);
     border-radius: .8rem;
+    color: var(--medium-gray);
+    cursor: pointer;
     padding: .5rem 3rem;
 }
 
 ol li, ul li {
     cursor: pointer;
+    color: var(--medium-gray);
 }
 
 /* Header Section */
@@ -221,10 +225,10 @@ figure {
     }
 
     .header-logo {
+        height: 32px;
         grid-area: logo;
         padding: 0;
         margin: 0 auto;
-        height: 32px;
     }
 
     .header-logo img {
@@ -233,10 +237,10 @@ figure {
 
     /* Navbar */
     nav {
-        grid-area: nav;
-        display: inline-block;
         height: 32px;
         width: 500px;
+        grid-area: nav;
+        display: inline-block;
     }
 
     nav ul li {
@@ -258,8 +262,8 @@ figure {
 
     /* Navbar Dropdown Menu */
     .desktop-menu {
-        position: relative;
         height: 100%;
+        position: relative;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -268,8 +272,8 @@ figure {
     
     .desktop-menu > li {
         width: 100px;
+        color: var(--medium-gray);
         text-align: center;
-        color: var(--medium-gray)
     }
 
     .desktop-menu ol {
@@ -283,15 +287,15 @@ figure {
     }
 
     .desktop-features-submenu {
-        display: none;
         width: 160px;
+        display: none;
         top: .6rem;
         right: 3.5rem;
     }
 
     .desktop-company-submenu {
-        display: none;
         width: 120px;
+        display: none;
         top: .6rem;
         right: -1rem;
     }
@@ -323,20 +327,20 @@ figure {
         background-color: white;
         border: 2px solid var(--medium-gray);
         border-radius: 1rem;
+        color: var(--medium-gray);
         cursor: pointer;
         margin-left: 1rem;
         padding: .5rem 1rem;
-        color: var(--medium-gray)
     }
 
     .header-reg-btns button:active {
-        color: var(--almost-black);
         border-color: var(--almost-black);
+        color: var(--almost-black);
     }
 
     .header-reg-btns a {
+        color: var(--medium-gray);
         cursor: pointer;
-        color: var(--medium-gray)
     }
 
     .header-reg-btns a:active {
@@ -354,7 +358,7 @@ figure {
         display: grid;
         padding: 0;
         grid-template-columns: .6fr .4fr;
-        grid-template-rows: .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr;
+        grid-template-rows: repeat(10, .5fr);
         grid-template-areas: 
             "main-text main-figure"
             "main-text main-figure"
