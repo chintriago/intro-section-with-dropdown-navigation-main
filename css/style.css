@@ -256,7 +256,7 @@ figure {
         padding-bottom: .15rem;
     }
 
-    nav a:active {
+    nav a:active, nav a:hover {
         color: var(--almost-black);
     }
 
@@ -333,7 +333,7 @@ figure {
         padding: .5rem 1rem;
     }
 
-    .header-reg-btns button:active {
+    .header-reg-btns button:active, .header-reg-btns button:hover {
         border-color: var(--almost-black);
         color: var(--almost-black);
     }
@@ -343,7 +343,7 @@ figure {
         cursor: pointer;
     }
 
-    .header-reg-btns a:active {
+    .header-reg-btns a:active, .header-reg-btns a:hover {
         color: var(--almost-black);
     }
 
@@ -407,7 +407,7 @@ figure {
         padding: 0;
     }
 
-    .main-text-container button:active {
+    .main-text-container button:active, .main-text-container button:hover {
         background-color: white;
         border: 1px solid black;
         color: black;
