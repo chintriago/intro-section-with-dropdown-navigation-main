@@ -106,18 +106,26 @@ a {
     margin-left: 20%;
 }
 
+.mobile-menu li:active {
+    color: var(--almost-black);
+}
+
 .mobile-menu-btns {
     text-align: center;
 }
 
-.mobile-menu-btns a {
+.mobile-menu-btns a:active {
+    color: var(--almost-black);
+}
+
+.mobile-login-btn {
     display: block;
     cursor: pointer;
     color: var(--medium-gray);
     padding-bottom: .8rem;
 }
 
-.mobile-menu-btns button {
+.mobile-register-btn {
     max-width: 100%;
     background-color: white;
     border: 1.5px solid var(--medium-gray);
@@ -323,7 +331,7 @@ figure {
         margin-left: auto;
     }
 
-    .header-reg-btns button {
+    .register-btn {
         background-color: white;
         border: 2px solid var(--medium-gray);
         border-radius: 1rem;
@@ -333,7 +341,7 @@ figure {
         padding: .5rem 1rem;
     }
 
-    .header-reg-btns button:active, .header-reg-btns button:hover {
+    .header-reg-btns a:active, .header-reg-btns a:hover {
         border-color: var(--almost-black);
         color: var(--almost-black);
     }
@@ -341,10 +349,6 @@ figure {
     .header-reg-btns a {
         color: var(--medium-gray);
         cursor: pointer;
-    }
-
-    .header-reg-btns a:active, .header-reg-btns a:hover {
-        color: var(--almost-black);
     }
 
     .header-hamburger-menu {
