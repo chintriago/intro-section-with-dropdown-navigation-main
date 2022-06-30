@@ -70,6 +70,8 @@ const desktopCompanyMenu = document.getElementById("js-desktop-company-menu");
 const desktopCompanySubMenu = document.getElementById("js-desktop-company-submenu");
 const desktopFeaturesArrow = document.getElementById("js-desktop-features-arrow");
 const desktopCompanyArrow = document.getElementById("js-desktop-company-arrow");
+
+// Url only works depending on where site is hosted.
 const urlArrowUp = "https://chintriago.github.io/intro-section-with-dropdown-navigation-main/images/icon-arrow-up.svg";
 const urlArrowDown = "https://chintriago.github.io/intro-section-with-dropdown-navigation-main/images/icon-arrow-down.svg";
 
