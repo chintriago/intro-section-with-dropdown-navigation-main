@@ -97,16 +97,25 @@ a {
     padding-bottom: 1rem;
 }
 
-.mobile-menu ul li img {
+.mobile-menu ul li a img {
     margin-right: .5rem;
 }
 
-.mobile-menu ol {
+.features-submenu, .company-submenu {
     display: none;
-    margin-left: 20%;
+    margin-left: 15%;
 }
 
-.mobile-menu li:active {
+.mobile-menu ul li:nth-child(1):active, .mobile-menu ul li:nth-child(3):active, .mobile-menu ul li:nth-child(5):active, .mobile-menu ul li:nth-child(6):active {
+    color: var(--almost-black);
+}
+
+.mobile-menu a {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.mobile-menu li a:active {
     color: var(--almost-black);
 }
 
@@ -135,7 +144,7 @@ a {
     padding: .5rem 3rem;
 }
 
-ol li, ul li {
+ul li  {
     cursor: pointer;
     color: var(--medium-gray);
 }
